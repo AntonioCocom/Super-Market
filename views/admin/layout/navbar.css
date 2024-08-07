@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Noto Sans", sans-serif;
+    letter-spacing: 1px;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.navbar {
+    background: linear-gradient(45deg, #9b44ff, #4287ff);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-sections {
+    display: flex;
+    gap: 1rem;
+}
+.navbar-section {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: transform 0.3s ease;
+}
+.navbar-section:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    transform: translateY(-2px);
+}
+.user-nav-icon{
+    width: 30px;
+    height: 30px;
+}
+.logout-btn {
+    background-color: white;
+    color: #4287ff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.logout-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+.navbar-brand {
+    animation: pulse 2s infinite;
+}
+
+.navbar-logo {
+    width: 100px;
+    height: 60px;
+    margin: 0px;
+    padding: 0px;
+}

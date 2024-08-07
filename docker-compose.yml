@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    container_name: super-market-web
+    ports:
+      - "80:80"
+    volumes:
+      - /c/xampp/htdocs/Super-Market/src:/var/www/html
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    container_name: super-market-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

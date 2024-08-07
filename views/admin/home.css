@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Noto Sans", sans-serif;
+    letter-spacing: 1px;
+}
+
+:root {
+    --primary-color: #9f44ff;
+    --secondary-color: #4287ff;
+}
+.general-button {
+    background-image: linear-gradient(45deg, #9b44ff, #4287ff);
+    background-size: 200% 200%;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius:25px;
+    cursor: pointer;
+    transition: background-position 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.general-button:hover {
+    animation: gradientShift 3s ease infinite;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.modal-content {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.modal-header {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-bottom: none;
+}
+.modal-title {
+    font-weight: bold;
+}
+.modal-body {
+    padding: 2rem;
+}
+.btn-close {
+    color: white;
+}
+.form-label {
+    color: #000;
+    font-weight: 600;
+}
+.form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(66, 135, 255, 0.25);
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+.modal-footer {
+    border-top: none;
+    padding: 1rem 2rem 2rem;
+}
+.table-responsive {
+    margin-top: 20px;
+}
+.btn-add-user {
+    margin-bottom: 20px;
+}
+
+
+.add-modal-popup {
+    width: 80% !important; /* Cambia este valor según tus necesidades */
+    max-width: 800px; /* Opcional: establece un ancho máximo */
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.delete-button {
+    background-color: #be2c2c !important;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius:25px;
+    cursor: pointer;
+    transition: background-position 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.delete-button:hover {
+    animation: gradientShift 3s ease infinite;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.cancel-button {
+    background-color: #888888 !important;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius:25px;
+    cursor: pointer;
+    transition: background-position 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cancel-button:hover {
+    animation: gradientShift 3s ease infinite;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
