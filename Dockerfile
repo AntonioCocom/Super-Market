@@ -1,4 +1,4 @@
-# Usar la imagen oficial de PHP
+# Usar la imagen oficial de PHP 8.1.25 con Apache
 FROM php:8.1.25-apache
 
 # Instalar extensiones necesarias
@@ -14,7 +14,7 @@ RUN pecl install mongodb \
     && docker-php-ext-enable mongodb
 
 # Copiar el contenido del proyecto al directorio raíz del servidor web
-COPY src/ /var/www/html/
+COPY . /var/www/html/
 
 # Establecer el directorio de trabajo
 WORKDIR /var/www/html

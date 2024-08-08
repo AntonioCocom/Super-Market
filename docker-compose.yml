@@ -6,8 +6,6 @@ services:
     container_name: super-market-web
     ports:
       - "80:80"
-    volumes:
-      - /c/xampp/htdocs/Super-Market/src:/var/www/html
     depends_on:
       - mongo
 
